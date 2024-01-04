@@ -1,0 +1,6 @@
+[package]
+name = "substrate-stdlib"
+version = "0.0.1"
+
+[addresses]
+substrate =  "0x1"
