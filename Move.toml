@@ -1,5 +1,5 @@
 [package]
-name = "substrate-stdlib"
+name = "SubstrateStdlib"
 version = "0.0.1"
 
 [addresses]
