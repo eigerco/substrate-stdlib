@@ -8,6 +8,7 @@ Currently, it contains the module:
 ## See also
 
 - [Pallet Move](https://github.com/eigerco/pallet-move)
+- [Move-stdlib](https://github.com/eigerco/move-stdlib)
 - [Substrate-Move](https://github.com/eigerco/substrate-move)
 - [smove](https://github.com/eigerco/smove)
 
