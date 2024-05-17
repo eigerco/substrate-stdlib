@@ -7,17 +7,6 @@
 /// Non-cryptograhic hashes:
 /// - SipHash: an add-rotate-xor (ARX) based family of pseudorandom functions created by Jean-Philippe Aumasson and Daniel J. Bernstein in 2012
 module substrate::substrate_hash {
-    //
-    // Constants
-    //
-
-    /// A newly-added native function is not yet enabled.
-    const E_NATIVE_FUN_NOT_AVAILABLE: u64 = 1;
-
-    //
-    // Functions
-    //
-
     /// Returns the (non-cryptographic) SipHash of `bytes`. See https://en.wikipedia.org/wiki/SipHash
     native public fun sip_hash(bytes: vector<u8>): u64;
 
