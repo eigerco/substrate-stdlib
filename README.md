@@ -4,6 +4,7 @@ This repository is part of [Pallet Move](https://github.com/eigerco/pallet-move)
 
 Currently, it contains the module:
 - __balance__: Supports the transfer of balances on the blockchain and checking current balances on accounts. Find more details in the [module documentation](doc/balance.md).
+- **substrate_hash**: Set of useful hash functions. Find more details in the [module documentation](doc/substrate_hash.md).
 
 ## See also
 
