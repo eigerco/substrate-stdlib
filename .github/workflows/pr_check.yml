@@ -1,0 +1,39 @@
+name: PR Check (bundle, test)
+
+on:
+  pull_request:
+    paths:
+      - tests/**
+      - sources/**
+      - Move.toml
+      - .github/workflows/pr_check.yml
+
+jobs:
+  common:
+    name: Run stdlib tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Get smove
+        uses: robinraju/release-downloader@v1.8
+        with:
+          repository: "eigerco/smove"
+          fileName: "smove.zip"
+          latest: true
+          extract: true
+      - name: Setup smove
+        shell: bash
+        run: |
+          echo "$GITHUB_WORKSPACE" >> $GITHUB_PATH
+          chmod +x "$GITHUB_WORKSPACE/smove"
+
+      - name: Build bundle
+        shell: bash
+        run: smove bundle
+
+      - name: Run tests
+        shell: bash
+        run: smove test -i 999999
