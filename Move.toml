@@ -3,4 +3,8 @@ name = "SubstrateStdlib"
 version = "0.0.1"
 
 [addresses]
-substrate =  "0x1"
+substrate = "0x1"
+std = "0x1"
+
+[dev-dependencies]
+MoveStdlib = { git = "https://github.com/eigerco/move-stdlib", rev = "main" }
